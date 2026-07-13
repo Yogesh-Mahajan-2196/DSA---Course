@@ -1,0 +1,30 @@
+Big O notation is used to measure how runnung time or space requirements for your program grow as input size grows.
+
+time = a*n + b
+
+1. Keep fastest growing term
+time = a*n
+
+2. b is constant
+
+3. Drop constants
+time = O(n)
+
+eg.1
+
+def find_first_pe(prices, eps, index):
+    pe = prices[index]/eps[index]
+    return pe
+
+O(1) - Big O complecity 
+
+eg.2
+numbers = [3,6,9,4,2,5,7,8,1]
+
+for i in range(len(numbers)):
+    for j in range(i+1, len(numbers)):
+        if numbers[i] == numbers[j]:
+            print(numbers[i] + " is a duplicate")
+            break
+
+time = a * (n**2) + b   ->   O(n**2)
